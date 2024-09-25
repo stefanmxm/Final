@@ -47,23 +47,30 @@ export default function ResponsiveAppBar() {
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
-          <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href="#app-bar-with-responsive-menu"
-            sx={{
-              mr: 2,
-              display: { xs: 'none', md: 'flex' },
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
-            }}
+          <Button
+            key={1}
+            onClick={() => router.push('/')}
+            sx={{ my: 2, color: 'white', display: 'block' }}
           >
-            VMS
-          </Typography>
+            <Typography
+              variant="h6"
+              noWrap
+              component="a"
+              href="#app-bar-with-responsive-menu"
+              sx={{
+                mr: 2,
+                display: { xs: 'none', md: 'flex' },
+                fontFamily: 'monospace',
+                fontWeight: 700,
+                letterSpacing: '.3rem',
+                color: 'inherit',
+                textDecoration: 'none',
+              }}
+            >
+
+              VMS
+            </Typography>
+          </Button>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
@@ -93,10 +100,10 @@ export default function ResponsiveAppBar() {
               sx={{ display: { xs: 'block', md: 'none' } }}
             >
 
-              <MenuItem key={1} onClick={() => router.push('/v2/product')}>
+              <MenuItem key={1} onClick={() => router.push('/product')}>
                 <Typography sx={{ textAlign: 'center' }}>Products</Typography>
               </MenuItem>
-              <MenuItem key={2} onClick={() => router.push('/v2/category')}>
+              <MenuItem key={2} onClick={() => router.push('/category')}>
                 <Typography sx={{ textAlign: 'center' }}>Categories</Typography>
               </MenuItem>
 
@@ -124,7 +131,7 @@ export default function ResponsiveAppBar() {
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             <Button
               key={1}
-              onClick={() => router.push('/v2/product')}
+              onClick={() => router.push('/product')}
               sx={{ my: 2, color: 'white', display: 'block' }}
             >
               Products
@@ -132,7 +139,7 @@ export default function ResponsiveAppBar() {
 
             <Button
               key={2}
-              onClick={() => router.push('/v2/category')}
+              onClick={() => router.push('/category')}
               sx={{ my: 2, color: 'white', display: 'block' }}
             >
               Categories
