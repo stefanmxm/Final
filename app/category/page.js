@@ -1,24 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
-import CategoryForm from "@/app/components/forms/CategoryForm";
 import Link from "next/link";
-
-import { DataGrid, GridToolbar, GridRowsProp, GridColDef } from "@mui/x-data-grid";
-
-import Modal from "@mui/material/Modal";
-
-import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import ListItemText from "@mui/material/ListItemText";
-import ListItemAvatar from "@mui/material/ListItemAvatar";
-import Avatar from "@mui/material/Avatar";
-import ImageIcon from "@mui/icons-material/Image";
-import WorkIcon from "@mui/icons-material/Work";
-import BeachAccessIcon from "@mui/icons-material/BeachAccess";
-
-import IconButton from "@mui/material/IconButton";
-import AddBoxIcon from "@mui/icons-material/AddBox";
 
 export default function Home() {
   const APIBASE = process.env.NEXT_PUBLIC_API_URL;
